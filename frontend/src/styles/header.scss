@@ -1,0 +1,88 @@
+@import "colors";
+
+nav {
+  height: 5rem;
+  padding: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.229);
+
+  .logo {
+    > a > svg{
+      font-size: 2.5rem;
+    }
+     h4 {
+      font-size: 1.4rem;
+      font-family: fantasy;
+      font-weight: 400;
+      color: $yellow;
+      white-space: nowrap;
+    }
+  }
+
+
+  > div {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+
+    > svg {
+      color: $yellow;
+      font-size: 2.5rem;
+    }
+
+    > a {
+      margin: 0 1.5rem;
+      color: $dark;
+      transition: color 0.3s;
+
+      &:hover {
+        color: $yellowdark;
+      }
+
+      > svg {
+        color: $yellow;
+        transition: inherit;
+        font-size: 1.5rem;
+
+        &:hover {
+          color: $lightdark;
+        }
+      }
+    }
+    .underline {
+      position: relative;
+    }
+
+    .underline::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      height: 2px;
+      width: 0%;
+      background-color: $yellowdark;
+      transition: all ease 0.5s;
+    }
+
+    .underline:hover::after {
+      width: 100%;
+    }
+  }
+}
+
+// Responsiveness
+@media screen and (max-width: 600px) {
+  nav {
+    padding: 1rem;
+    
+    .logo > h4 {
+      display: none;
+    }
+
+    > div > a {
+      margin: 0 0.5rem;
+    }
+  }
+}

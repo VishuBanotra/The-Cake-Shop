@@ -1,0 +1,93 @@
+@import "./colors.scss";
+
+.contact {
+  height: 100vh;
+  width: 100%;
+  background: rgb(227, 222, 215);
+  background: radial-gradient(
+    circle,
+    rgba(227, 222, 215, 1) 0%,
+    rgba(253, 187, 45, 1) 100%
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow-x: hidden;
+
+  > form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    padding: 2rem;
+    width: 30%;
+    height: 80%;
+    justify-content: center;
+
+    > h2 {
+      font-size: 1.5rem;
+      text-transform: uppercase;
+      margin: 2rem 0;
+    }
+
+    > input,
+    > textarea,
+    > button {
+      padding: 1rem;
+      outline: none;
+      border: 1px solid rgb(202, 202, 202);
+      margin: 0.5rem;
+      border-radius: 5px;
+      width: 85%;
+    }
+
+    > button {
+      background-color: $yellow;
+      border: none;
+      cursor: pointer;
+      color: white;
+      font-weight: 500;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      &:hover {
+        background-color: $yellowdark;
+        transition: ease-in-out 0.3s;
+      }
+    }
+  }
+
+  .formBorder {
+    position: relative;
+    width: 200px;
+    height: 80%;
+    background-color: white;
+    border-radius: 0 200px 200px 0;
+
+    > div {
+      width: 200px;
+      height: 200px;
+      position: absolute;
+      top: 50%;
+      transform: translate(50%, -50%);
+      filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.566));
+
+      > img {
+        width: 100%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .contact {
+    height: 70vh;
+
+    > form {
+      height: 100%;
+      width: 100%;
+    }
+    > .formBorder {
+      display: none;
+    }
+  }
+}

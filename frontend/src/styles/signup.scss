@@ -1,0 +1,122 @@
+@import "./colors.scss";
+
+.signup {
+  height: 85vh;
+  width: 100%;
+  background: radial-gradient(
+    circle,
+    rgba(227, 222, 215, 1) 0%,
+    rgba(253, 187, 45, 1) 100%
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+ 
+
+  > form {
+    background-color: white;
+    width: 650px;
+    height: 60%;
+    margin: auto;
+    margin: 2rem;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+   
+
+    > h2 {
+      font-family: fantasy;
+      font-weight: 100;
+      margin-top: 1rem;
+      text-align: center;
+      color: $yellow;
+    }
+    > h3 {
+      text-align: center;
+    }
+    > input {
+      font-size: 1rem;
+      width: 60%;
+      margin: 5px 0;
+      padding: 0.5rem 1rem;
+      outline: none;
+      border: 0.5px solid #55555585;
+      border-radius: 5px;
+    }
+    > button {
+      margin: 5px 0;
+      padding: 0.5rem 2rem;
+      outline: none;
+      border: none;
+      background-color: $yellow;
+      border-radius: 3px;
+      font-size: 0.9rem;
+      cursor: pointer;
+      transition: all ease-in-out 0.2s;
+      font-weight: 500;
+
+      &:hover {
+        background-color: $yellowdark;
+      }
+    }
+    > div {
+      > span {
+        font-weight: 500;
+        font-size: 1rem;
+        margin: 0 5px;
+      }
+      > a {
+        color: $yellow;
+        font-weight: 500;
+        font-size: 1rem;
+      }
+    }
+  }
+}
+
+.role-cont {
+    border-radius: 5px;
+  background-color: #ecebeb;
+  width: 60%;
+  margin: 0.4rem 0;
+  padding: 0.5rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  > p {
+    font-size: 1rem;
+    font-weight: 300;
+  }
+
+  > div {
+    > label {
+      margin: 0 5px;
+      font-size: 1rem;
+      font-weight: 300;
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .role-cont {
+    padding: 0.5rem 0.1rem;
+
+    > p {
+      font-size: 0.8rem;
+    }
+
+    > div {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      > label {
+        font-size: 0.8rem;
+      }
+    }
+  }
+}

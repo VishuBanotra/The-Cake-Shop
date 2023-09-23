@@ -1,0 +1,107 @@
+@import "./colors.scss";
+
+.cart-page {
+  background-color: $light;
+  width: 100%;
+  height: 100%;
+  padding: 1rem 0;
+
+  > main {
+    height: 100%;
+    background-color: white;
+    max-width: 900px;
+    margin: auto;
+    padding: 2rem;
+
+    > article {
+      padding: 2rem;
+
+      > div {
+        display: flex;
+        justify-content: space-between;
+        margin: 1rem 0;
+      }
+      > a {
+        background-color: $yellow;
+        padding: 0.5rem 1rem;
+        color: #fff;
+        font-weight: 500;
+        border-radius: 5px;
+        text-align: center;
+        float: right;
+        &:hover {
+          background-color: $yellowdark;
+          transition: all ease-in-out 0.3s;
+        }
+      }
+    }
+  }
+}
+
+.cartItem {
+  background-color: rgb(246, 246, 246);
+  padding: 1rem;
+  margin: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 5px;
+
+  > div {
+    display: flex;
+    align-items: center;
+
+    > h4 {
+      font-weight: 400;
+      letter-spacing: 1px;
+    }
+
+    > img {
+      height: 50px;
+      width: 50px;
+      border-radius: 3px;
+      margin: 0 1rem;
+    }
+
+    > input {
+      text-align: center;
+      background-color: #fff7df;
+      width: 2rem;
+      height: 2rem;
+      padding: 0.5rem;
+      border: none;
+      margin: 0.25rem;
+      outline: none;
+      border-radius: 5px;
+      color: $yellowdark;
+      font-weight: 500;
+
+      &::-webkit-outer-spin-button,
+      &::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
+    }
+
+    > button {
+      cursor: pointer;
+      border: none;
+      padding: 0.5rem;
+      background-color: $dark;
+      color: white;
+      border-radius: 5px;
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .cart-page {
+    padding: 0;
+
+    > main > article > a{
+      float: none;
+      width: 100%;
+      display: block;
+    }
+  }
+}

@@ -1,0 +1,89 @@
+@import "./colors.scss";
+
+.orderDetails {
+  background-color: $light;
+  width: 100%;
+  padding: 1rem 0;
+
+  > main {
+    max-width: 900px;
+    background-color: white;
+    margin: auto;
+    padding: 2rem;
+    overflow-x: auto;
+
+    > h1 {
+      text-transform: uppercase;
+      text-align: center;
+      font-size: 3rem;
+      font-weight: 300;
+      margin: 3rem;
+    }
+
+    > div {
+      margin: 3rem 0;
+      // text-align: center;
+
+      > h1 {
+        font-size: 1.8rem;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        text-align: center;
+      }
+      > p {
+        display: flex;
+        justify-content: space-between;
+        font-weight: 300;
+        white-space: pre-wrap;
+        margin: 1rem 0;
+
+        > b {
+          margin-right: 5px;
+        }
+      }
+    }
+
+    > article {
+      > h1 {
+        font-size: 1.8rem;
+        text-transform: uppercase;
+        margin: 2rem 0rem 1rem 0rem;
+        text-align: center;
+      }
+
+      > div {
+        background-color: rgb(246, 246, 246);
+        margin: 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 1rem;
+        border: 5px;
+
+        > h4 {
+          font-weight: 300;
+        }
+
+        > div {
+          font-weight: 300;
+          > span {
+            font-weight: 300;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .orderDetails {
+    padding: 0rem;
+
+    > main {
+      > h1 {
+        margin: 1rem;
+        font-size: 2.5rem;
+      }
+    }
+  }
+}

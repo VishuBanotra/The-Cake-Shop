@@ -1,0 +1,77 @@
+@import "./colors.scss";
+
+.profile {
+  background-color: $light;
+  height: 100vh;
+  width: 100%;
+  padding: 1rem 0;
+
+  > main {
+    height: 100%;
+    background-color: white;
+    max-width: 900px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 4rem;
+
+    > img {
+      height: 15rem;
+      width: 15rem;
+      border-radius: 100%;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.146);
+    }
+
+    > h5 {
+      font-size: 2rem;
+      margin-top: 2rem;
+    }
+
+    > div {
+      margin: 2rem;
+
+      > a {
+        background-color: $yellow;
+        padding: 0.7rem 1.5rem;
+        text-align: center;
+        color: white;
+        font-size: 1rem;
+        border-radius: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        > svg {
+          margin-right: 5px;
+        }
+
+        &:hover {
+          background-color: $yellowdark;
+          transition: all ease-in-out 0.3s;
+        }
+      }
+    }
+
+    > button {
+      border: none;
+      outline: none;
+      padding: 0.7rem 1.5rem;
+      text-align: center;
+      font-weight: 500;
+      font-size: 1rem;
+      border-radius: 5px;
+      cursor: pointer;
+
+      &:hover {
+        background-color: rgba(156, 156, 156, 0.864);
+        transition: all ease-in-out 0.3s;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .profile {
+    padding: 0rem;
+  }
+}

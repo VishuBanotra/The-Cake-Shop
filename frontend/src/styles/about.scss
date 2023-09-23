@@ -1,0 +1,108 @@
+@import "./colors.scss";
+
+.about {
+  width: 100%;
+  background-color: $light;
+  padding: 1rem 0;
+
+  > main {
+    background-color: white;
+    max-width: 900px;
+    height: 100%;
+    margin: auto;
+
+    > h1 {
+      font-weight: 500;
+      font-size: 2.5rem;
+      text-transform: uppercase;
+      background-color: $dark;
+      color: $yellow;
+      padding: 1.5rem;
+    }
+
+    > article {
+      margin: 1rem 0;
+      padding: 1rem;
+
+      h4 {
+        font-size: 2rem;
+        font-weight: 300;
+        text-transform: uppercase;
+        text-align: center;
+        margin: 1rem 0;
+      }
+
+      > p {
+        margin: 1rem 0;
+        letter-spacing: 0.5px;
+      }
+
+      .secondHeading {
+        margin-top: 3rem;
+      }
+      > a {
+        background-color: $dark;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 100%;
+        width: 2.5rem;
+        height: 2.5rem;
+        margin: auto;
+        color: white;
+        font-size: 1.3rem;
+        transition: all 0.3s;
+
+        &:hover {
+          color: $yellow;
+          transform: scale(1.1);
+        }
+      }
+    }
+    > div {
+      > h2 {
+        background-color: $dark;
+        color: $yellow;
+        padding: 1.5rem;
+        font-size: 1.5rem;
+        text-transform: uppercase;
+      }
+      > article {
+        padding: 1.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        > div {
+          > img {
+            width: 150px;
+            height: 150px;
+            border-radius: 100%;
+          }
+          > h3 {
+            margin-top: 1rem;
+            text-transform: uppercase;
+            font-weight: 400;
+          }
+        }
+        > p {
+          margin: 1rem;
+          font-size: 1.1rem;
+          text-transform: uppercase;
+          text-align: center;
+          letter-spacing: 0.5px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .about {
+    padding: 0;
+    > main {
+      > h1 {
+        text-align: center;
+      }
+    }
+  }
+}

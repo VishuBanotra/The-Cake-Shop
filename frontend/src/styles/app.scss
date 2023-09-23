@@ -1,0 +1,96 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Tenor+Sans&display=swap");
+@import "./colors.scss";
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body::-webkit-scrollbar {
+  background-color: transparent;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: $yellow;
+  border-radius: 10px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.not-found {
+  background-color: $light;
+  width: 100%;
+  height: 80vh;
+  padding: 1rem;
+  > main {
+    background-color: white;
+    max-width: 900px;
+    height: 100%;
+    margin: auto;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    > div {
+      display: flex;
+      align-items: center;
+      margin: 3rem;
+
+      > svg {
+        font-size: 4rem;
+      }
+
+      h1 {
+        text-align: center;
+        text-transform: uppercase;
+        font-size: 3rem;
+        font-weight: 100;
+        margin: 0 1rem;
+      }
+    }
+
+    > a{
+        background-color: $yellow;
+        outline: none;
+        color: white;
+        padding: 0.5rem 1rem;
+        margin: 1rem;
+        border-radius: 5px;
+        text-align: center;
+        font-size: 1.1rem;
+        font-weight: 500;
+        transition: all 0.3s;
+
+        &:hover {
+            background-color: $yellowdark;
+        }
+    }
+  }
+}
+
+.loader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+
+    >svg {
+        font-size: 15rem;
+        color: $yellow;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        opacity: 0.3;
+    }
+
+    >div {
+        font-size: 2rem;
+    }
+}
